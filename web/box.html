@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>AndroLuaBox</title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.2/lib/index.css">
+		<script src="https://cdn.jsdelivr.net/npm/vant@2.2/lib/vant.min.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	</head>
+	<body>
+		<link rel="stylesheet" type="text/css" href="css/box.css"/>
+		<div id="app">
+			<van-nav-bar title="AndroLuaBox-Web"></van-nav-bar>
+			<div class="loading" v-if="loading">
+				<van-loading type="spinner" color="#1989fa">正在加载中...</van-loading>
+			</div>
+			<div v-else>
+				<div class="content" v-if="active==0">
+					<br>
+					<van-grid :gutter="8" :column-num="3">
+					  <van-grid-item  :text="value" v-for="(key,value) in contentdata" @click="ondoc(key)"></van-grid-item>
+					</van-grid>
+				</div>
+				<div class="content" v-else>
+					<van-panel title="个人开发者" desc="怎么学都学不会的何同学">
+					  <div style="padding: 30px;">此平台仅供AndroLua学习之用，转载请声明出处。编写和研究代码真的很不容易。</div>
+					</van-panel>
+				</div>
+			</div>
+			<van-tabbar v-model="active">
+			  <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+			  <van-tabbar-item icon="qr">关于</van-tabbar-item>
+			</van-tabbar>
+		</div>
+		<script src="js/box.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

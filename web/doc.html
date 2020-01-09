@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>AndroLuaBox</title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.2/lib/index.css">
+		<script src="https://cdn.jsdelivr.net/npm/vant@2.2/lib/vant.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	</head>
+	<body>
+		<link rel="stylesheet" type="text/css" href="css/doc.css"/>
+		<div id="app">
+			<van-nav-bar title="AndroLuaBox-Web" left-arrow @click-left="onClickLeft"></van-nav-bar>
+			<div class="content">
+				<code>{{doc}}</code>
+			</div>
+		</div>
+		<script src="js/doc.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
